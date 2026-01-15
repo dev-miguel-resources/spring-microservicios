@@ -1,4 +1,4 @@
-package com.micros.api_order_service_v1;
+package com.micros.order;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
