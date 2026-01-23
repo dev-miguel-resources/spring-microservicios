@@ -1,4 +1,4 @@
-package com.micros.api_restaurant_service_v1;
+package com.micros.restaurant;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
