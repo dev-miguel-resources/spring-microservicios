@@ -14,5 +14,19 @@ services:
     volumes:
       - api-order-service-v1-db-data:/var/lib/postgresql/data
 
+  restaurant-order:
+    image: postgres:15
+    container_name: postgres-restaurant
+    restart: always
+    environment:
+      POSTGRES_DB: restaurantdb
+      POSTGRES_USER: restaurantuser
+      POSTGRES_PASSWORD: restaurantpass
+    ports:
+      - "50031:5432"
+    volumes:
+      - api-restaurant-service-v1-db-data:/var/lib/postgresql/data
+
 volumes:
   api-order-service-v1-db-data:
+  api-restaurant-service-v1-db-data:
