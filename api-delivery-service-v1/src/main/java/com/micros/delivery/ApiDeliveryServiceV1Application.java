@@ -1,4 +1,4 @@
-package com.micros.api_delivery_service_v1;
+package com.micros.delivery;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

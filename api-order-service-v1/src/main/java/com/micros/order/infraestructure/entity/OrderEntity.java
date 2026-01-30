@@ -37,7 +37,6 @@ public class OrderEntity {
     private String restaurantName;
 
     // OrderStatus
-
     @Enumerated(EnumType.STRING)
     @Column(name = "status", nullable = false)
     private OrderStatus status;
