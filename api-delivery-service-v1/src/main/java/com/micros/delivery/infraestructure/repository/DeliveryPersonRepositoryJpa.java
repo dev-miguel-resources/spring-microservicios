@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.micros.delivery.infraestructure.entity.DeliveryPersonEntity;
 
-public interface DeliveryPersonJpa extends JpaRepository<DeliveryPersonEntity, Long> {
+public interface DeliveryPersonRepositoryJpa extends JpaRepository<DeliveryPersonEntity, Long> {
 
 }
