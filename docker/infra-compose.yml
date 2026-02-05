@@ -14,7 +14,7 @@ services:
     volumes:
       - api-order-service-v1-db-data:/var/lib/postgresql/data
 
-  restaurant-order:
+  postgres-restaurant:
     image: postgres:15
     container_name: postgres-restaurant
     restart: always
@@ -27,6 +27,20 @@ services:
     volumes:
       - api-restaurant-service-v1-db-data:/var/lib/postgresql/data
 
+  postgres-delivery:
+    image: postgres:15
+    container_name: postgres-delivery
+    restart: always
+    environment:
+      POSTGRES_DB: deliverydb
+      POSTGRES_USER: deliveryuser
+      POSTGRES_PASSWORD: deliverypass
+    ports:
+      - "50041:5432"
+    volumes:
+      - api-delivery-service-v1-db-data:/var/lib/postgresql/data
+
 volumes:
   api-order-service-v1-db-data:
   api-restaurant-service-v1-db-data:
+  api-delivery-service-v1-db-data:

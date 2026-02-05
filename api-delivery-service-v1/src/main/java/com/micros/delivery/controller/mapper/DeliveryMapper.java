@@ -1,6 +1,7 @@
 package com.micros.delivery.controller.mapper;
 
 import com.micros.delivery.controller.dto.AssignDriverRequest;
+import com.micros.delivery.controller.dto.DeliveryResponse;
 import com.micros.delivery.domain.Delivery;
 import com.micros.delivery.domain.DeliveryPerson;
 
@@ -34,6 +35,14 @@ public class DeliveryMapper {
         return domain;
     }
 
-    // public static DeliveryResponse toResponse()
+    public static DeliveryResponse toResponse(Delivery delivery) {
+
+        return new DeliveryResponse(
+                delivery.getId(),
+                delivery.getOrderId(),
+                delivery.getAddress(),
+                delivery.getStatus().name(),
+                delivery.getDeliveryPerson().getName());
+    }
 
 }
