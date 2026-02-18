@@ -3,6 +3,8 @@ package com.micros.payment.domain;
 import java.math.BigDecimal;
 import java.util.UUID;
 
+import org.hibernate.annotations.Check;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -24,8 +26,9 @@ public class CheckBalance {
     // Monto requerido que se desea validar contra el saldo disponible
     private BigDecimal requiredAmount;
 
-    // Dejar pendiente una característica
-
     // Constructor personalizado
+    public static CheckBalance createNew(Long customerId, String accountId, BigDecimal requiredAmount) {
+        return new CheckBalance(null, customerId, accountId, requiredAmount);
+    }
 
 }
