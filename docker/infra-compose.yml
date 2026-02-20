@@ -40,7 +40,21 @@ services:
     volumes:
       - api-delivery-service-v1-db-data:/var/lib/postgresql/data
 
+  postgres-payment:
+    image: postgres:15
+    container_name: postgres-payment
+    restart: always
+    environment:
+      POSTGRES_DB: paymentdb
+      POSTGRES_USER: paymentuser
+      POSTGRES_PASSWORD: paymentpass
+    ports:
+      - "50051:5432"
+    volumes:
+      - api-payment-service-v1-db-data:/var/lib/postgresql/data
+
 volumes:
   api-order-service-v1-db-data:
   api-restaurant-service-v1-db-data:
   api-delivery-service-v1-db-data:
+  api-payment-service-v1-db-data:

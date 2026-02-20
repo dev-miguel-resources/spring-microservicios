@@ -3,8 +3,6 @@ package com.micros.payment.domain;
 import java.math.BigDecimal;
 import java.util.UUID;
 
-import org.hibernate.annotations.Check;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
