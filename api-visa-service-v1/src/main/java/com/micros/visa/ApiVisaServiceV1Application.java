@@ -1,4 +1,4 @@
-package com.micros.api_visa_service_v1;
+package com.micros.visa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
