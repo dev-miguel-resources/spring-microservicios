@@ -53,6 +53,14 @@ services:
     volumes:
       - api-payment-service-v1-db-data:/var/lib/postgresql/data
 
+  visa-service:
+    build:
+      context: ../api-visa-service-v1
+      dockerfile: Dockerfile
+    container_name: api-visa-service-v1
+    ports:
+      - "52010:52010"
+
 volumes:
   api-order-service-v1-db-data:
   api-restaurant-service-v1-db-data:
