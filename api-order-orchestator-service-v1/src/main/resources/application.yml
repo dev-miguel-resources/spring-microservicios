@@ -1,0 +1,18 @@
+server:
+  # Puerto en que se levantará la app.
+  port: 50100
+
+  servlet:
+    # Prefijo base que tendrán todos los endpoints de este servicio.
+    context-path: /api/v1/order-orchestator
+
+# Configuración de clientes HTTP que este servicio usará para comunicarse
+# con otros ms o servicios externos.
+http-clients:
+  internal:
+    # Cliente para comunicarse con el microservicio de órdenes
+    order:
+      # URl base del ms de órdenes
+      base-url: http://localhost:50010/api/v1/orders
+      # Tiempo máximo de espera para la respuesta antes de lanzar un timeout
+      timeout: 5s
