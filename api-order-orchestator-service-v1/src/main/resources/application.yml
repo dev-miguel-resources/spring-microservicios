@@ -16,3 +16,20 @@ http-clients:
       base-url: http://localhost:50010/api/v1/orders
       # Tiempo máximo de espera para la respuesta antes de lanzar un timeout
       timeout: 5s
+
+    payment:
+      base-url: http://localhost:50020/api/v1/payments
+      timeout: 5s
+
+    restaurant:
+      base-url: http://localhost:50030/api/v1/restaurants
+      timeout: 5s
+
+    delivery:
+      base-url: http://localhost:50040/api/v1/delivery
+      timeout: 5s
+
+  external:
+    visa:
+      base-url: http://localhost:52010/api/visa/
+      timeout: 5s
